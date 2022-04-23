@@ -58,18 +58,6 @@
 </style>
 <body>
 
-<!- Background Music ->
-
-<div style="display: flex">
-    <button style="margin-left: 1240px;width: 100px;height: 65px;" id="piano-button" onclick="playPiano()"><img src="/static/assestsBP/playButton.png" alt="play" width="81px" height="60px"></button>
-    <button style="width: 100px;height: 65px;" id="piano-button" onclick="pausePiano()"><img src="/static/assestsBP/pauseButton.png" alt="pause" width="60px" height="60px"></button>
-</div>
-<div>
-    <audio  loop id="piano" src="/static/stayPiano.mp3" type="audio/mpeg">
-    </audio>
-</div>
-
-
 <div id="main"><!-- open main div -->
     <div id="header"><!-- open header div -->
         <h1>Which BLACKPINK Member Are You?</h1>
@@ -78,79 +66,58 @@
     <center>
 
         <!- Change Header Backgrounds ->
-        <button id="background1" onclick="changeImage()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink1.jpg" alt="Background1" width="120px" height="82px"></button>
-        <button id="background2" onclick="changeImage2()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink3.jpg" alt="Background2" width="120px" height="82px"></button>
+        <button id="background1" onclick="changeImage1()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink3.jpg" alt="Background1" width="120px" height="82px"></button>
+        <button id="background2" onclick="changeImage2()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink01.jpg" alt="Background2" width="120px" height="82px"></button>
         <button id="background3" onclick="changeImage3()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink4.jpg" alt="Background3" width="120px" height="82px"></button>
         <button id="background4" onclick="changeImage4()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink2.jpg" alt="Background4" width="120px" height="82px"></button>
         <br><br><br><br><br><br>
 
         <!- Quiz ->
         <form id="form1">
-            <fieldset>
             <h2>1. You're going out with friends for a small party, what are you going to wear?</h2>
-            <label for="style_1"><input type="radio" name="style" value="1" />Campus Style</label>
-            <label for="style_2"><input type="radio" name="style" value="2" />Sports Style</label>
-            <label for="style_3"><input type="radio" name="style" value="4" />Vintage Style</label>
-            <label for="style_4"><input type="radio" name="style" value="3" />Dark Style</label>
+            <label for="style_1"><input type="radio" name="style" value="1" id="style_1"/>Preppy & Put Together</label>
+            <label for="style_2"><input type="radio" name="style" value="2" id="style_2"/>Light & Sporty</label>
+            <label for="style_3"><input type="radio" name="style" value="4" id="style_3"/>Smooth & Vintage</label>
+            <label for="style_4"><input type="radio" name="style" value="3" id="style_4"/>Comfy Chic</label>
             <!-- use name instead of id because id can only use once in a html-->
             <!-- different amount of points (1, 2, 3 or 4) are stored behind different choices-->
             <br><br><br><br><br><br>
             <h2>2. You and your friends are now in the café, what will you order?</h2>
-            <label for="food_1"><input type="radio" name="food" value="2" />Ice Cream<br><img src='/static/assestsBP/ice cream.jpg/' width='200' /></label>
-            <label for="food_2"><input type="radio" name="food" value="1" />Date Cake<br><img src='/static/assestsBP/date cake.jpg/' width='200' /></label>
-            <label for="food_3"><input type="radio" name="food" value="4" />French Fries<br><img src='/static/assestsBP/french fries.jpg/' width='300' /></label>
-            <label for="food_4"><input type="radio" name="food" value="3" />Kimchi Soup<br><img src='/static/assestsBP/kimchi soup.jpg/' width='300' /></label>
+            <label for="food_1"><input type="radio" name="food" value="2" id="food_1"/>Ice Cream<br><img src='/static/assestsBP/ice cream.jpg/' width='200' /></label>
+            <label for="food_2"><input type="radio" name="food" value="1" id="food_2"/>Cake<br><img src='/static/assestsBP/date cake.jpg/' width='200' /></label>
+            <label for="food_3"><input type="radio" name="food" value="4" id="food_3"/>French Fries<br><img src='/static/assestsBP/french fries.jpg/' width='300' /></label>
+            <label for="food_4"><input type="radio" name="food" value="3" id="food_4"/>Soup<br><img src='/static/assestsBP/kimchi soup.jpg/' width='300' /></label>
             <br><br><br><br><br><br>
             <h2>3. You and your friends are chatting: if you could date a BLACKPINK member, who would you date?</h2>
-            <label for="member_1"><input type="radio" name="member" value="3" />Jennie<br><img src='/static/assestsBP/jennie.jpg/' width='200' /></label>
-            <label for="member_2"><input type="radio" name="member" value="4" />Lisa<br><img src='/static/assestsBP/lisa.jpg/' width='200' /></label>
-            <label for="member_3"><input type="radio" name="member" value="2" />Jisoo<br><img src='/static/assestsBP/jisoo.jpeg/' width='200' /></label>
-            <label for="member_4"><input type="radio" name="member" value="1" />Rose<br><img src='/static/assestsBP/rose.jpg/' width='200' /></label>
+            <label for="member_1"><input type="radio" name="member" value="3" id="member_1"/>Jennie<br><img src='/static/assestsBP/jennie.jpg/' width='200' /></label>
+            <label for="member_2"><input type="radio" name="member" value="4" id="member_2"/>Lisa<br><img src='/static/assestsBP/lisa.jpg/' width='200' /></label>
+            <label for="member_3"><input type="radio" name="member" value="2" id="member_3"/>Jisoo<br><img src='/static/assestsBP/jisoo.jpeg/' width='200' /></label>
+            <label for="member_4"><input type="radio" name="member" value="1" id="member_4"/>Rose<br><img src='/static/assestsBP/rose.jpg/' width='200' /></label>
             <br><br><br><br><br><br>
             <h2>4. You've had enough to eat and drink, what do you decide to do next?</h2>
-            <label for="activity_1"><input type="radio" name="activity" value="2" />Go to the yoga studio.</label>
-            <label for="activity_2"><input type="radio" name="activity" value="4" />Shopping of course!</label>
-            <label for="activity_3"><input type="radio" name="activity" value="1" />Watch a movie.</label>
-            <label for="activity_4"><input type="radio" name="activity" value="3" />Singing time.</label>
+            <label for="activity_1"><input type="radio" name="activity" value="2" id="activity_1"/>Go to the yoga studio!</label>
+            <label for="activity_2"><input type="radio" name="activity" value="4" id="activity_2"/>Shopping of course!</label>
+            <label for="activity_3"><input type="radio" name="activity" value="1" id="activity_3"/>Go to watch a movie!</label>
+            <label for="activity_4"><input type="radio" name="activity" value="3" id="activity_4"/>Karaoke time!</label>
             <br><br><br><br><br>
-            <button type="submit" value="Submit">Submit</button>
-            </fieldset>
+            <button type="submit" value="Submit">Submit!</button>
         </form>
 
-        <p>You are: <span id="grade" >__</span></p> <!-- display none because we don't want to display the total points the user got-->
+        <p>You are: <span id="grade" style="display: none">__</span></p> <!-- display none because we don't want to display the total points the user got-->
         <p id="grade2"></p>
         <br><br><br><br><br><br>
 
-        <!-BLACKPINK MV->
-        <!-- kill this love -->
-        <button id="mv1" onclick="displayVideo()" style="font-size: 22px; width: 190px; height: 65px;">Kill This Love</button>
-        <div id="display-video" style="display: none">
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/2S24-y0Ij3Y"></iframe>
-            <!--iframe specifies an inline frame, that means it is used to embed some other document within the current HTML document.-->
-        </div>
-
-        <!-- how you like that -->
-        <button id="mv2" onclick="displayVideo2()" style="font-size: 22px; width: 190px; height: 65px;">How You Like That</button>
-        <div id="display-video2" style="display: none">
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/ioNng23DkIM"></iframe>
-        </div>
-
-        <!-- ddu-du-ddu-du -->
-        <button id="mv3" onclick="displayVideo3()" style="font-size: 22px; width: 190px; height: 65px;">DDU-DU-DDU-DU</button>
-        <div id="display-video3" style="display: none">
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/IHNzOHi8sJs"></iframe>
-        </div>
-
-        <br><br><br><br><br><br>
 
         <!-Random BLACKPINK Fact Generator->
         <div>
             <button onclick="newFact()" style="font-size: 18px; width: 250px; height: 85px;">Generate BLACKPINK Fact
-                <img src="/static/assestsBP/blackpink1.jpg" alt="blackpink" width="100px" height="60px" style="margin-top:-1px;">
+                <img src="/static/assestsBP/blackpink01.jpg" alt="blackpink" width="100px" height="60px" style="margin-top:-1px;">
             </button>
             <div id="factDisplay" style="font-size: 17px; font-family: monospace;">
                 <!-- Quotes will display here -->
             </div>
+            <br><br><br><br><br><br>
+
         </div>
     </center>
 </div><!-- close main div -->
@@ -170,16 +137,16 @@
 
         document.getElementById("grade").innerHTML = result;
         //display member's name and picture after clicked submit button
-        if (4 <= result <= 6) {
+        if (result >= 4 && result <= 6) {
             result2 = "Jisoo<br /><img src='/static/assestsBP/jisoo.jpeg' width='300' />"
         } else {
-            if (7 <= result <= 9) {
+            if (result >= 7 && result <= 9) {
                 result2 = "Jennie<br /><img src='/static/assestsBP/jennie.jpg' width='300' />"
             } else {
-                if (10 <= result <= 12) {
+                if (result >= 10 && result <= 12) {
                     result2 = "Rose<br /><img src='/static/assestsBP/rose.jpg' width='300' />"
                 } else {
-                    if (13 <= result <= 16) {
+                    if (result >= 13 && result <= 16) {
                         result2 = "Lisa<br /><img src='/static/assestsBP/lisa.jpg' width='300' />"
                     }
                 }
@@ -211,40 +178,17 @@
         document.getElementById('factDisplay').innerHTML = facts[randomNumber];
     }
 
-    //click button to display BLACKPINK mv
-    function displayVideo() {
-        if($('#display-video').css('display') === 'none') $('#display-video').css('display', 'block')
-        else $('#display-video').css('display', 'none')
-    }
-    function displayVideo2() {
-        if($('#display-video2').css('display') === 'none') $('#display-video2').css('display', 'block')
-        else $('#display-video2').css('display', 'none')
-    }
-    function displayVideo3() {
-        if($('#display-video3').css('display') === 'none') $('#display-video3').css('display', 'block')
-        else $('#display-video3').css('display', 'none')
-    }
-
     //click button to change header image
-    function changeImage() {
-        document.getElementById("header").style.backgroundImage = 'url("/static/assets/blackpink (1).jpg")'
+    function changeImage1() {
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsBP/blackpink3.jpg/")'
     }
     function changeImage2() {
-        document.getElementById("header").style.backgroundImage = 'url("/static/assets/blackpink3.jpg")'
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsBP/blackpink01.jpg/")'
     }
     function changeImage3() {
-        document.getElementById("header").style.backgroundImage = 'url("/static/assets/blackpink4.jpg")'
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsBP/blackpink4.jpg/")'
     }
     function changeImage4() {
-        document.getElementById("header").style.backgroundImage = 'url("/static/assets/blackpink6.jpg")'
-    }
-
-    //background music
-    function playPiano() {
-        document.getElementById('piano').play();
-    }
-
-    function pausePiano() {
-        document.getElementById('piano').pause();
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsBP/blackpink2.jpg/")'
     }
 </script>
