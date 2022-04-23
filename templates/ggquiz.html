@@ -2,9 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Greek Goddess Quiz</title>
+    <style>
+        body {
+            background-image: url("/static/assestsGG/doveBG.jpg");
+            font-family: Helvetica, monospace;
+        }
+        #main {
+            width: 80%;
+            max-width: 950px;
+            border: 1px gray solid;
+            margin: auto;
+            padding: 10px;
+            background-color: rgba(83,105,122, 0.8);
+            border-radius: 10px;
+        }
+        #header {
+            margin-top: 0;
+            border: 2px solid black;
+            padding: 280px;
+            background: url("/static/assestsGG/goddessheader1.jpg");
+            color: black;
+            background-size: 800px;
+        }
+        label {
+            display: block;
+            font-size: 25px;
+            font-family: monospace;
+        }
+        input {
+            width: 30px;
+            margin-left: 20px;
+        }
+        h1 {
+            font-size: 78px;
+            margin-top: -180px;
+            margin-left: -150px;
+            font-family: monospace;
+        }
+        h2 {
+            font-size: 30px;
+            font-family: monospace;
+        }
+        p {
+            font-size: 25px;
+            font-family: monospace;
+        }
+        button {
+            font-size: 25px;
+            width: 125px;
+            height: 50px;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
+<div id="main"><!-- open main div -->
 
+    <div id="header"><!-- open header div -->
+        <h1>Which Greek Goddess Are You?</h1>
+    </div><!-- close header div -->
+
+    <center>
+        <!- Change Header Backgrounds ->
+        <button id="background1" onclick="changeImage()" style="width: 145px; height: 86px;"><img src="/static/assestsGG/goddessheader02.jpg" alt="Background1" width="120px" height="82px"></button>
+        <button id="background2" onclick="changeImage2()" style="width: 145px; height: 86px;"><img src="/static/assestsGG/goddessheader1.jpg" alt="Background2" width="120px" height="82px"></button>
+        <button id="background3" onclick="changeImage3()" style="width: 145px; height: 86px;"><img src="/static/assestsGG/goddessheader3.jpg" alt="Background3" width="120px" height="82px"></button>
+        <button id="background4" onclick="changeImage4()" style="width: 145px; height: 86px;"><img src="/static/assestsGG/goddessheader04.jpg" alt="Background4" width="120px" height="82px"></button>
+        <br><br><br><br><br><br>
+    </center>
+</div>
 </body>
+<script>
+    //click button to change header image
+    function changeImage() {
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsGG/goddessheader02.jpg")'
+    }
+    function changeImage2() {
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsGG/goddessheader1.jpg")'
+    }
+    function changeImage3() {
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsGG/goddessheader3.jpg")'
+    }
+    function changeImage4() {
+        document.getElementById("header").style.backgroundImage = 'url("/static/assestsGG/goddessheader04.jpg")'
+    }
+</script>
 </html>
