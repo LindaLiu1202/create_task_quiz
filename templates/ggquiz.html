@@ -5,7 +5,7 @@
     <title>Greek Goddess Quiz</title>
     <style>
         body {
-            background-image: url("/static/assestsGG/doveBG.jpg");
+            background-image: url("/static/assestsGG/dovebg.jpg");
             font-family: Helvetica, monospace;
         }
         #main {
@@ -53,6 +53,34 @@
             width: 125px;
             height: 50px;
             font-family: monospace;
+        }
+
+        h4 a {
+            color: darkslateblue;
+            font-family: monospace;
+            background-color: rgba(255,255,255, 0.8);
+            text-decoration: none;
+            font-size: 27px;
+        }
+
+        h4 a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 0;
+            background-color: ghostwhite;
+            position: relative;
+            top: 0;
+            transition: all ease-in-out 250ms;
+        }
+
+        h4 a:hover {
+            color: ghostwhite;
+            background-color: rgba(0,0,0, 0.7);
+        }
+
+        h4 a:hover::before {
+            width: 100%;
         }
     </style>
 </head>
@@ -106,6 +134,8 @@
         <p>You are: <span id="grade" style="display: none">__</span></p> <!-- display none because we don't want to display the total points the user got-->
         <p id="grade2"></p>
         <br><br><br><br><br><br>
+
+        <h4><a href="{{ url_for('index') }}">Return to Main!</a></h4>
     </center>
 
 </div>

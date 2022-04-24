@@ -3,11 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Quizzes Main</title>
+    <style>
+        h1 a {
+            color: darkslateblue;
+            font-family: monospace;
+            background-color: rgba(255,255,255, 0.8);
+            text-decoration: none;
+            font-size: 27px;
+        }
+
+        h1 a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 0;
+            background-color: ghostwhite;
+            position: relative;
+            top: 0;
+            transition: all ease-in-out 250ms;
+        }
+
+        h1 a:hover {
+            color: ghostwhite;
+            background-color: rgba(0,0,0, 0.7);
+        }
+
+        h1 a:hover::before {
+            width: 100%;
+        }
+
+        p a {
+            color: darkslateblue;
+            font-family: monospace;
+            background-color: rgba(255,255,255, 0.8);
+            text-decoration: none;
+        }
+
+        p a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 0;
+            background-color: ghostwhite;
+            position: relative;
+            top: 0;
+            transition: all ease-in-out 250ms;
+        }
+
+        p a:hover {
+            color: ghostwhite;
+            background-color: rgba(0,0,0, 0.7);
+        }
+
+        p a:hover::before {
+            width: 100%;
+        }
+
+        body {
+            background-image: url("/static/assestsGG/mainbg8.jpg");
+            background-size: cover;
+        }
+    </style>
 </head>
-<body style="margin: 5% auto auto; font-family: monospace; text-align: center">
-<h1>Quizzes</h1>
-<p><a href="{{ url_for('bpquiz') }}">BLACKPINK</a></p>
-<p><a href="{{ url_for('ggquiz') }}">GODDESSES</a></p>
+<body style="margin: 5% auto auto; font-family: monospace; text-align: center; width: 90%">
+<center>
+
+<table style="width: 85%; text-align: center; margin-top: 9%">
+    <tr>
+        <th><h1><a href="{{ url_for('bpquiz') }}">Which BLACKPINK Member Are You?</a></h1></th>
+        <th><h1><a href="{{ url_for('ggquiz') }}">Which Greek Goddess Are You?</a></h1></th>
+    </tr>
+</table>
+<div style="color: ghostwhite; font-size: larger">
+    <br>
+    <h3>Welcome to Saathvika Ajith and Linda Liu's final Create Task submission!</h3>
+    <p>Above we have two unique and exciting personality quizzes that you can take to learn more about yourself! We hope you are impressed by and appreciate our efforts!</p>
+    <br><br>
+    <p>Here are the links to our respective final videos:</p>
+    <table style="width: 30%; text-align: center; margin-top: -1%">
+        <tr>
+            <th><p><a href="">Saathvika</a></p></th>
+            <th><p><a href="">Linda</a></p></th>
+        </tr>
+    </table>
+</div>
+</center>
 </body>
 </html>
 
