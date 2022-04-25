@@ -82,10 +82,25 @@
         h4 a:hover::before {
             width: 100%;
         }
+        button {
+            font-size: 17px;
+            width: 80px;
+            height: 45px;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
-<div id="main"><!-- open main div -->
+    <!- Background Music ->
+        <div style="display: flex">
+           <button style="margin-left: 1240px;" id="ggmusic-play" onclick="playMusic()">play</button>
+           <button id="ggmusic-pause" onclick="pauseMusic()">pause</button>
+        </div>
+        <div>
+            <audio autoplay loop id="ggmusic" src="/static/ggmusic.mp3" type="audio/mpeg"> </audio>
+        </div>
+
+    <div id="main"><!-- open main div -->
 
     <div id="header"><!-- open header div -->
         <h1>Which Greek Goddess Are You?</h1>
@@ -186,6 +201,14 @@
         document.getElementById("grade2").innerHTML = result2;
 
         return false; // required to not refresh the page; just leave this here
+    }
+    //background music
+    function playMusic() {
+        document.getElementById('ggmusic').play();
+    }
+
+    function pauseMusic() {
+        document.getElementById('ggmusic').pause();
     }
 </script>
 </html>

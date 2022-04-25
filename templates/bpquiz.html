@@ -82,8 +82,23 @@
     h4 a:hover::before {
         width: 100%;
     }
+    button {
+        font-size: 17px;
+        width: 80px;
+        height: 45px;
+        font-family: monospace;
+    }
 </style>
 <body>
+
+    <!- Background Music ->
+    <div style="display: flex">
+        <button style="margin-left: 1240px;" id="bpmusic-play" onclick="playMusic()">play</button>
+        <button id="bpmusic-pause" onclick="pauseMusic()">pause</button>
+    </div>
+    <div>
+        <audio autoplay loop id="bpmusic" src="/static/bpmusic.mp3" type="audio/mpeg"> </audio>
+    </div>
 
 <div id="main"><!-- open main div -->
     <div id="header"><!-- open header div -->
@@ -218,5 +233,14 @@
     }
     function changeImage4() {
         document.getElementById("header").style.backgroundImage = 'url("/static/assestsBP/blackpink2.jpg/")'
+    }
+
+    //background music
+    function playMusic() {
+        document.getElementById('bpmusic').play();
+    }
+
+    function pauseMusic() {
+        document.getElementById('bpmusic').pause();
     }
 </script>
