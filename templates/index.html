@@ -60,7 +60,7 @@
         }
 
         body {
-            background-image: url("/static/assestsGG/mainbg8.jpg");
+            background-image: url("/static/mainbg.jpg");
             background-size: cover;
         }
 
@@ -76,24 +76,14 @@
             box-sizing: border-box;
         }
 
-        body {
-            display: grid;
-            min-height: 100vh;
-            place-items: center;
-            line-height: 1.6;
-            background: var(--clr-neutral-900);
-            font-family: sans-serif;
-            padding-right: 15em;
-        }
-
         .card {
             color: var(--clr-neutral-100);
             padding: 10rem 0 0;
-            max-width: 35ch;
+            max-width: 75ch;
             border-radius:0.5rem;
             overflow: hidden;
-
-            transition: transform 500ms ease;
+            alignment: center;
+            transition: transform 250ms ease;
         }
 
         .card:hover,
@@ -110,13 +100,13 @@
                     hsl(0 0% 0% / 0.95)
             );
             transform: translateY(55%);
-            transition: transform 500ms ease;
+            transition: transform 250ms ease;
         }
 
         .card:hover .card-content,
         .card:focus-within .card-content {
             transform: translateY(0);
-            transition-delay: 500ms;
+            transition-delay: 250ms;
         }
 
         .card:focus-within .card-content {
@@ -125,13 +115,13 @@
 
         .card-content > *:not(.card-title) {
             opacity:0;
-            transition: opacity 500ms linear;
+            transition: opacity 250ms linear;
         }
 
         .card:hover .card-content > *:not(.card-title),
         .card:focus-within .card-content > *:not(.card-title) {
             opacity: 1;
-            transition-delay: 1000ms;
+            transition-delay: 500ms;
         }
 
         .card-title {
@@ -149,7 +139,7 @@
             background: var(--clr-accent-400);
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 500ms ease;
+            transition: transform 250ms ease;
         }
 
         .card:hover .card-title::after,
@@ -175,8 +165,7 @@
 </head>
 <body style="margin: 5% auto auto; font-family: monospace; text-align: center; width: 90%">
 <center>
-
-<table style="width: 85%; text-align: center; margin-top: 9%">
+<table style="width: 80%; text-align: center; margin-top: 2%; alignment: center">
     <tr>
         <th><div class="card" style="background-image: url('/static/assestsBP/blackpink2.jpg'); background-size: cover;">
             <div class="card-content">
@@ -197,14 +186,14 @@
     </tr>
 </table>
 <div style="color: ghostwhite; font-size: larger">
-    <br>
+    <br><br>
     <h3>Welcome to Saathvika Ajith and Linda Liu's final Create Task submission!</h3>
     <p>Above we have two unique and exciting personality quizzes that you can take to learn more about yourself! We hope you are impressed by and appreciate our efforts!</p>
-    <br><br>
+    <br>
     <p>Here are the links to our respective final videos:</p>
     <table style="width: 30%; text-align: center; margin-top: -1%">
         <tr>
-            <th><p><a href="https://www.loom.com/share/b11053949de7479180e587f36b48fe52">Saathvika's Vid</a>
+            <th><p><a href="">Saathvika's Vid</a>
             <br><a href="https://docs.google.com/document/d/1uyDIzzQcXqRIQMYFrSamSSLzTqiBVcLq-BhYv5mXdVY/edit?usp=sharing">& Description</a></p></th>
             <th><p><a href="">Linda's Vid</a></p></th>
         </tr>
