@@ -1,7 +1,6 @@
 Welcome to the create_task_quiz repository!
-Contributors: Saathvika Ajith & Linda Liu
 
-[Create Task Runtime](http://studyowl.tk:8080/quiz/)
+### Contributors: Saathvika Ajith & Linda Liu
 
 ## Ideas
 We have two unique and exciting personality quizzes that you can take to learn more about yourself! These interactive quiz games are called: "Which Blackpink Member Are You?" and "Which Greek Goddess Are You?" and they contain multiple features such as a card hover interaction in the homepage, pause and play music buttons, animated navigation buttons, header image changing buttons, a random Blackpink fact generator API, and finally the actual quizzes themselves which include unique questions and images to help you figure out who your personality is the most similar to. Our project expresses creativity and explores our personal interests through the topics of the quizzes, the formatting and CSS, and our own original quiz questions. In each quiz, there are a total of 4 questions that contain 4 different options. A numerical value (1, 2, 3 or 4) will be assigned to each of the options, and different ranges of ending point values will correspond to different Blackpink members or Greek Goddesses.
