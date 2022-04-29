@@ -64,6 +64,8 @@
             background-size: cover;
         }
 
+        /* Card Hover Interaction css*/
+        /* css custom properties*/
         :root {
             --clr-neutral-900:hsl(207,19%,9%);
             --clr-neutral-100:hsl(0,0%,100%);
@@ -192,5 +194,45 @@
         <br>
     </div>
     </center>
+<center>
+<table style="width: 80%; text-align: center; margin-top: 2%; alignment: center">
+    <tr>
+        <!--  Blackpink Quiz Card Display  -->
+        <th><div class="card" style="background-image: url('/static/assestsBP/blackpink2.jpg'); background-size: cover;">
+            <div class="card-content">
+                <h2 class="card-title">Blackpink Quiz</h2>
+                <p class="card-body">Which Blackpink Member Are You?</p>
+                <a href="{{ url_for('bpquiz') }}" class="button">Start Quiz!</a>
+            </div>
+        </div>
+        </th>
+        <!--  Greek Goddess Quiz Card Display  -->
+        <th><div class="card" style="  background-image: url('/static/assestsGG/doveBG.jpg'); background-size: cover;">
+            <div class="card-content">
+                <h2 class="card-title">Greek Goddess Quiz</h2>
+                <p class="card-body">Which Greek Goddess Are You?</p>
+                <a href="{{ url_for('ggquiz') }}" class="button">Start Quiz!</a>
+            </div>
+        </div>
+        </th>
+    </tr>
+</table>
+<!--  Description  -->
+<div style="color: ghostwhite; font-size: larger">
+    <br><br>
+    <h3>Welcome to Saathvika Ajith and Linda Liu's final Create Task submission!</h3>
+    <p>Above we have two unique and exciting personality quizzes that you can take to learn more about yourself! We hope you are impressed by and appreciate our efforts!</p>
+    <br>
+   <!--  Links  -->
+    <p>Here are the links to our respective final videos:</p>
+    <table style="width: 30%; text-align: center; margin-top: -1%">
+        <tr>
+            <th><p><a href="">Saathvika's Vid</a>
+            <br><a href="https://docs.google.com/document/d/1uyDIzzQcXqRIQMYFrSamSSLzTqiBVcLq-BhYv5mXdVY/edit?usp=sharing">& Description</a></p></th>
+            <th><p><a href=" ">Linda's Vid</a></p></th>
+        </tr>
+    </table>
+</div>
+</center>
 </body>
 </html>
