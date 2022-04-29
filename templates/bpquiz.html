@@ -1,96 +1,96 @@
 <!DOCTYPE html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<html lang="en">
 <head>
     <title>Which BLACKPINK Member Are You Quiz</title>
+    <style>
+        body {
+            background-image: url("/static/assestsBP/blackpink5.jpg/");
+            font-family: Helvetica, monospace;
+        }
+        #main {
+            width: 80%;
+            max-width: 950px;
+            border: 1px gray solid;
+            margin: auto;
+            padding: 10px;
+            background-color: rgba(255,255,255, 0.8);
+            border-radius: 10px;
+        }
+        #header {
+            margin-top: 0;
+            border: 2px solid black;
+            padding: 280px;
+            height: 20px;
+            background: beige url("/static/assestsBP/blackpink2.jpg/");
+            color: white;
+        }
+        label {
+            display: block;
+            font-size: 25px;
+            font-family: monospace;
+        }
+        input {
+            width: 30px;
+            margin-left: 20px;
+        }
+        h1 {
+            font-size: 78px;
+            margin-top: -180px;
+            margin-left: -150px;
+            font-family: monospace;
+        }
+        h2 {
+            font-size: 30px;
+            font-family: monospace;
+        }
+        p {
+            font-size: 25px;
+            font-family: monospace;
+        }
+        button {
+            font-size: 25px;
+            width: 125px;
+            height: 50px;
+            font-family: monospace;
+        }
+
+        h4 a {
+            color: darkslateblue;
+            font-family: monospace;
+            background-color: rgba(255,255,255, 0.8);
+            text-decoration: none;
+            font-size: 27px;
+        }
+
+        h4 a::before {
+            content: '';
+            display: block;
+            height: 5px;
+            width: 0;
+            background-color: ghostwhite;
+            position: relative;
+            top: 0;
+            transition: all ease-in-out 250ms;
+        }
+
+        h4 a:hover {
+            color: ghostwhite;
+            background-color: rgba(0,0,0, 0.7);
+        }
+
+        h4 a:hover::before {
+            width: 100%;
+        }
+        button {
+            font-size: 17px;
+            width: 80px;
+            height: 45px;
+            font-family: monospace;
+        }
+    </style>
 </head>
-<style>
-    body {
-        background-image: url("/static/assestsBP/blackpink5.jpg/");
-        font-family: Helvetica, monospace;
-    }
-    #main {
-        width: 80%;
-        max-width: 950px;
-        border: 1px gray solid;
-        margin: auto;
-        padding: 10px;
-        background-color: rgba(255,255,255, 0.8);
-        border-radius: 10px;
-    }
-    #header {
-        margin-top: 0;
-        border: 2px solid black;
-        padding: 280px;
-        height: 20px;
-        background: beige url("/static/assestsBP/blackpink2.jpg/");
-        color: white;
-    }
-    label {
-        display: block;
-        font-size: 25px;
-        font-family: monospace;
-    }
-    input {
-        width: 30px;
-        margin-left: 20px;
-    }
-    h1 {
-        font-size: 78px;
-        margin-top: -180px;
-        margin-left: -150px;
-        font-family: monospace;
-    }
-    h2 {
-        font-size: 30px;
-        font-family: monospace;
-    }
-    p {
-        font-size: 25px;
-        font-family: monospace;
-    }
-    button {
-        font-size: 25px;
-        width: 125px;
-        height: 50px;
-        font-family: monospace;
-    }
 
-    h4 a {
-        color: darkslateblue;
-        font-family: monospace;
-        background-color: rgba(255,255,255, 0.8);
-        text-decoration: none;
-        font-size: 27px;
-    }
-
-    h4 a::before {
-        content: '';
-        display: block;
-        height: 5px;
-        width: 0;
-        background-color: ghostwhite;
-        position: relative;
-        top: 0;
-        transition: all ease-in-out 250ms;
-    }
-
-    h4 a:hover {
-        color: ghostwhite;
-        background-color: rgba(0,0,0, 0.7);
-    }
-
-    h4 a:hover::before {
-        width: 100%;
-    }
-    button {
-        font-size: 17px;
-        width: 80px;
-        height: 45px;
-        font-family: monospace;
-    }
-</style>
 <body>
-
     <!- Background Music ->
     <div style="display: flex">
         <button style="margin-left: 1240px;" id="bpmusic-play" onclick="playMusic()">play</button>
@@ -106,7 +106,6 @@
     </div><!-- close header div -->
 
     <center>
-
         <!- Change Header Backgrounds ->
         <button id="background1" onclick="changeImage1()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink3.jpg" alt="Background1" width="120px" height="82px"></button>
         <button id="background2" onclick="changeImage2()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink01.jpg" alt="Background2" width="120px" height="82px"></button>
@@ -149,7 +148,6 @@
         <p id="grade2"></p>
         <br><br><br><br><br><br>
 
-
         <!-Random BLACKPINK Fact Generator->
         <div>
             <button onclick="newFact()" style="font-size: 18px; width: 250px; height: 85px;">Generate BLACKPINK Fact
@@ -168,7 +166,6 @@
 
 <script>
     document.getElementById("form1").onsubmit=function() {
-        //if total point is between 10 and 12, you are rose
         let result2;
 
         const style = parseInt(document.querySelector('input[name = "style"]:checked').value);
@@ -213,7 +210,12 @@
         'BLACKPINK has also been able to make big moves on the global stage, thanks to the unique background of each member. For example, Rosé was born in New Zealand and grew up in Australia, while Jennie went to school in New Zealand for a number of years. Lisa grew up in Thailand, and Jisoo was raised in South Korea.',
         'Between the 4 members, they can speak a number of languages besides Korean, like Japanese, English, Thai, and Mandarin. These language skills allow them to interact with more fans in more countries.',
         'BLACKPINK’s new single Kill This Love just casually beat out Ariana Grande’s thank u, next for the most views for a music video debut on YouTube within 24 hours, which was 56.7 MILLION VIEWS.',
-        'Lisa’s step-father is none other than Marco Bruschweiler, a Master Chef and member of The World Association of Chefs’ Societies. He seems to be very supportive of Lisa, and has even made an appearance on BLACKPINK House, which moved Lisa to tears.'
+        'Lisa’s step-father is none other than Marco Bruschweiler, a Master Chef and member of The World Association of Chefs’ Societies. He seems to be very supportive of Lisa, and has even made an appearance on BLACKPINK House, which moved Lisa to tears.',
+        'Rosé has dual citizenship: New Zealand (by birthplace) and South Korea (by her parents and residency).',
+        'Rosé is the first K-pop soloist to have 3 MV teasers with 1.5m likes on YouTube.',
+        'Jennie has been credited as a fashion editor for her March 2021 Vogue photo shoot.',
+        'Jennie has over 2.2 million followers on Spotify. She is the 7th most followed Korean female soloist on the platform.',
+        'Jisoo is the de facto leader in the group, as the group decided to not have an official one.'
     ];
 
     function newFact() {
@@ -244,3 +246,4 @@
         document.getElementById('bpmusic').pause();
     }
 </script>
+</html>

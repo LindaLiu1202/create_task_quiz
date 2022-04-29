@@ -1,7 +1,7 @@
-‘<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+<!--Coded By Saathvika Ajith-->
 <head>
-    <meta charset="UTF-8">
     <title>Greek Goddess Quiz</title>
     <style>
         body {
@@ -90,6 +90,7 @@
         }
     </style>
 </head>
+
 <body>
     <!- Background Music ->
         <div style="display: flex">
@@ -146,7 +147,8 @@
                 <button type="submit" value="Submit">Submit!</button>
         </form>
 
-        <p>You are: <span id="grade" style="display: none">__</span></p> <!-- display none because we don't want to display the total points the user got-->
+        <!-- here is where the final result displays -->
+        <p>You are: <span id="grade" style="display: none">__</span></p>
         <p id="grade2"></p>
         <br><br><br><br><br><br>
 
@@ -155,6 +157,7 @@
 
 </div>
 </body>
+
 <script>
     //click button to change header image
     function changeImage() {
@@ -171,18 +174,18 @@
     }
 
     document.getElementById("form2").onsubmit=function() {
-        //if total point is between 10 and 12, you are rose
         let result2;
 
+        // the points from each answer the user selected are collected here
         const style = parseInt(document.querySelector('input[name = "style"]:checked').value);
         const food = parseInt(document.querySelector('input[name = "food"]:checked').value);
         const member = parseInt(document.querySelector('input[name = "member"]:checked').value);
         const activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
 
-        const result = style + food + member + activity;  //calculate total, add points together
+        const result = style + food + member + activity;  // add the points together, and then saves them
 
         document.getElementById("grade").innerHTML = result;
-        //display member's name and picture after clicked submit button
+        // each greek goddess corresponds to a different numerical range
         if (result >= 4 && result <= 6) {
             result2 = "<img src='/static/assestsGG/hera.jpg' width='300' />"
         } else {
@@ -198,9 +201,9 @@
                 }
             }
         }
-        document.getElementById("grade2").innerHTML = result2;
+        document.getElementById("grade2").innerHTML = result2; // the correct goddess is assigned to the display area
 
-        return false; // required to not refresh the page; just leave this here
+        return false; // required to not refresh the page each time you take the quiz
     }
     //background music
     function playMusic() {
