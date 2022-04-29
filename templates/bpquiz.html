@@ -92,7 +92,7 @@
 </head>
 
 <body>
-    <!- Background Music ->
+    <!-- Background Music -->
     <div style="display: flex">
         <button style="margin-left: 1240px;" id="bpmusic-play" onclick="playMusic()">play</button>
         <button id="bpmusic-pause" onclick="pauseMusic()">pause</button>
@@ -107,14 +107,14 @@
     </div><!-- close header div -->
 
     <center>
-        <!- Change Header Backgrounds ->
+        <!-- Change Header Backgrounds -->
         <button id="background1" onclick="changeImage1()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink3.jpg" alt="Background1" width="120px" height="82px"></button>
         <button id="background2" onclick="changeImage2()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink01.jpg" alt="Background2" width="120px" height="82px"></button>
         <button id="background3" onclick="changeImage3()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink4.jpg" alt="Background3" width="120px" height="82px"></button>
         <button id="background4" onclick="changeImage4()" style="width: 145px; height: 86px;"><img src="/static/assestsBP/blackpink2.jpg" alt="Background4" width="120px" height="82px"></button>
         <br><br><br><br><br><br>
 
-        <!- Quiz ->
+        <!-- Quiz -->
         <form id="form1">
             <h2>1. You're going out with friends for a small party, what are you going to wear?</h2>
             <label for="style_1"><input type="radio" name="style" value="1" id="style_1"/>Preppy & Put Together</label>
@@ -149,7 +149,7 @@
         <p id="grade2"></p>
         <br><br><br><br><br><br>
 
-        <!-Random BLACKPINK Fact Generator->
+        <!-- Random BLACKPINK Fact Generator -->
         <div>
             <button onclick="newFact()" style="font-size: 18px; width: 250px; height: 85px;">Generate BLACKPINK Fact
                 <img src="/static/assestsBP/blackpink01.jpg" alt="blackpink" width="100px" height="60px" style="margin-top:-1px;">
@@ -159,7 +159,7 @@
             </div>
             <br><br><br><br><br><br>
 
-            <h4><a href="{{ url_for('index') }}">Return to Main!</a></h4>
+            <h4><a href="{{ url_for('index') }}">Return to Main!</a></h4> <!-- click to return to homepage -->
         </div>
     </center>
 </div><!-- close main div -->
@@ -199,7 +199,7 @@
     } //this ends the submit function
 
     //random BLACKPINK facts
-    const facts = [
+    const facts = [  //list of Blackpink facts
         'In 2016, YG Entertainment revealed that the reason BLACKPINK was chosen was to dismantle the idea that the color “pink” is only used to portray prettiness or cuteness. With this new group of girls, they wanted to show that pink doesn’t just mean “pretty,” but also incredible talent and hard work.',
         'Jisoo is crazy for Pikachu.',
         'BLACKPINK is the highest-charting South Korean girl group of all time.',
@@ -219,6 +219,7 @@
         'Jisoo is the de facto leader in the group, as the group decided to not have an official one.'
     ];
 
+    //generate random Blackpink fact
     function newFact() {
         const randomNumber = Math.floor(Math.random() * (facts.length));
         document.getElementById('factDisplay').innerHTML = facts[randomNumber];
