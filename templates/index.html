@@ -4,34 +4,7 @@
     <meta charset="UTF-8">
     <title>Quizzes Main</title>
     <style>
-        h1 a {
-            color: darkslateblue;
-            font-family: monospace;
-            background-color: rgba(255,255,255, 0.8);
-            text-decoration: none;
-            font-size: 27px;
-        }
-
-        h1 a::before {
-            content: '';
-            display: block;
-            height: 5px;
-            width: 0;
-            background-color: ghostwhite;
-            position: relative;
-            top: 0;
-            transition: all ease-in-out 250ms;
-        }
-
-        h1 a:hover {
-            color: ghostwhite;
-            background-color: rgba(0,0,0, 0.7);
-        }
-
-        h1 a:hover::before {
-            width: 100%;
-        }
-
+        /* link animation effect css */
         p a {
             color: darkslateblue;
             font-family: monospace;
@@ -64,8 +37,8 @@
             background-size: cover;
         }
 
-        /* Card Hover Interaction css*/
-        /* css custom properties*/
+        /* Card Hover Interaction css */
+        /* css custom properties */
         :root {
             --clr-neutral-900:hsl(207,19%,9%);
             --clr-neutral-100:hsl(0,0%,100%);
@@ -165,37 +138,10 @@
     </style>
 </head>
 
-<body style="margin: 5% auto auto; font-family: monospace; text-align: center; width: 90%">
-    <center>
-    <table style="width: 80%; text-align: center; margin-top: 3%; alignment: center">
-        <tr>
-            <th><div class="card" style="background-image: url('/static/assestsBP/blackpink2.jpg'); background-size: cover;">
-                <div class="card-content">
-                    <h2 class="card-title">Blackpink Quiz</h2>
-                    <p class="card-body">Which Blackpink Member Are You?</p>
-                    <a href="{{ url_for('bpquiz') }}" class="button">Start Quiz!</a>
-                </div>
-            </div>
-            </th>
-            <th><div class="card" style="  background-image: url('/static/assestsGG/doveBG.jpg'); background-size: cover;">
-                <div class="card-content">
-                    <h2 class="card-title">Greek Goddess Quiz</h2>
-                    <p class="card-body">Which Greek Goddess Are You?</p>
-                    <a href="{{ url_for('ggquiz') }}" class="button">Start Quiz!</a>
-                </div>
-            </div>
-            </th>
-        </tr>
-    </table>
-    <div style="color: ghostwhite; font-size: larger">
-        <br><br>
-        <h3>Welcome to Saathvika Ajith and Linda Liu's final Create Task submission!</h3>
-        <p>Above we have two unique and exciting personality quizzes that you can take to learn more about yourself! We hope you are impressed by and appreciate our efforts!</p>
-        <br>
-    </div>
-    </center>
+<!-- start of body, sets margin and css for the code within -->
+<body style="margin: 5.5% auto auto; font-family: monospace; text-align: center; width: 90%">
 <center>
-<table style="width: 80%; text-align: center; margin-top: 2%; alignment: center">
+<table style="width: 80%; text-align: center; margin-top: 4%; alignment: center">
     <tr>
         <!--  Blackpink Quiz Card Display  -->
         <th><div class="card" style="background-image: url('/static/assestsBP/blackpink2.jpg'); background-size: cover;">
@@ -224,12 +170,11 @@
     <p>Above we have two unique and exciting personality quizzes that you can take to learn more about yourself! We hope you are impressed by and appreciate our efforts!</p>
     <br>
    <!--  Links  -->
-    <p>Here are the links to our respective final videos:</p>
+    <p>Here are the links to our respective final submission PDFs:</p>
     <table style="width: 30%; text-align: center; margin-top: -1%">
         <tr>
-            <th><p><a href="">Saathvika's Vid</a>
-            <br><a href="https://docs.google.com/document/d/1uyDIzzQcXqRIQMYFrSamSSLzTqiBVcLq-BhYv5mXdVY/edit?usp=sharing">& Description</a></p></th>
-            <th><p><a href=" ">Linda's Vid</a></p></th>
+            <th><p><a href="https://docs.google.com/document/d/1WRi-yBh7VTLPOO3IMxCNii_9lWA25RnRY-4wuVBnDTc/edit?usp=sharing">Saathvika's</a></p></th>
+            <th><p><a href=" ">Linda's</a></p></th>
         </tr>
     </table>
 </div>

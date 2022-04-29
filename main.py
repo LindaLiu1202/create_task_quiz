@@ -1,5 +1,7 @@
-from flask import Flask, render_template
+from flask import render_template
 from __init__ import app
+# this is where all the html pages are connected with their url locations on the website
+# this allows linking pages within the code and outside of the code on the website
 
 
 @app.route('/')
